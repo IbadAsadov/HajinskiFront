@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--fontawesome  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <!-- fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Hajinsky Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg my-2 px-0 ">
+                        <a class="navbar-brand my-logo" href="#">
+                            <img src="img/logo.svg" alt="">
+                           
+                        </a>
+                        <button class="navbar-toggler menu-toggle-button my-2 toggle-color"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                          
+                        </button>
+                      
+                        <div class="collapse navbar-collapse my-2 navbar-bg-section" id="navbarSupportedContent">
+                          <ul class="navbar-nav mx-auto navbar-ul">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#"> Projects</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#">Library</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#">Offers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact us</a>
+                            </li>
+                            
+                          </ul>
+                         
+                            <div class="form-inline my-2 my-lg-0  menu-left">
+                                <div class="menu-langs">
+                                    <a href="">EN</a>
+                                    <a href="">RU</a>
+                                </div> 
+                                <a class="menu-log-in" href="">Log in</a>
+                            </div>
+                        </div>
+                      </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="home-page">
+        <div class="video-box">
+            <video loop="" autoplay="" muted=""  playsinline="" id="myVideo">
+                <source src="video/VID-20201103-WA0032.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="main-content">
+            <h1>Bring online learning to your workspace</h1>
+            <p>With the Learn.co each subject is made up of skills, in the order they need to be completed.</p>
+            <div>
+                <a href="">Uzv ol</a>
+                <a href='video/VID-20201103-WA0032.mp4' id="videoPlay" >Video izle</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="social-links">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="tutorials">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                   <div class="tutorials-header">
+                        <h1 class="tutorials-header-caption">
+                            Our Lessons
+                        </h1>
+                        <div class="capiton-cursor"></div>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+    </section> -->
+    <section class="popup-1" id="popup-1">
+        <i class="fas fa-times" id="closePopup-1"></i>
+
+        <div>
+            
+            <video id="popupVideo" controls>
+               
+            </video>
+        </div>
+
+
+    </section>
+    <!-- <section style="background-color: yellow;width: 100%;height: 100vh;"></section> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $('#videoPlay').click(function(e){
+            let link = this.href;
+            $('#popupVideo').attr('src',link);
+            $('#popup-1').fadeToggle(500);
+            e.preventDefault();
+        })
+
+        $('#closePopup-1').click(function(e){
+
+            $('#popup-1').fadeToggle(500);
+            e.preventDefault();
+        })
+        $('.tutorials-header').mouseover(function(e){
+            $('.capiton-cursor').css('display','block');
+            $('.capiton-cursor').css('left',e.pageX+'px');
+            $('.capiton-cursor').css('top',e.pageY+'px');
+            // console.log(e.pageX+'px');
+            // console.log(e.pageY+'px');
+        })
+    </script>
+
+  </body>
+</html>
